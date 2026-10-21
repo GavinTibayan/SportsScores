@@ -10,16 +10,21 @@
 #   - Goals Against
 
 # You will ask how many teams are playing.
-TeamCheck = int(1)
-while TeamCheck == 1:
+TCheck = int(1)
+while TCheck == 1:
     Teams = input("How many teams are playing?")
-    if int(Teams) > int(0):
-        TeamCheck -=1
+    if int(Teams) > int(1):
+        TCheck -=1
+        TLst = []
     else:
-        print("Now a valid number, please try again.")
+        print("Now a valid number of teams, please try again.")
+# Loop that many times, create a team and set all scores to 0, then append it to your list of teams
+print("What are the team names?")
+while int(Teams) > 0:
+    TLst.append(input())
+    Teams = int(Teams) - int(1)
 print("end")
 
-# Loop that many times, create a team and set all scores to 0, then append it to your list of teams
 # Start an infinite loop for main menu
 #   1) Add score
 #   2) See Team stats
