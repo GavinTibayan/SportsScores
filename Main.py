@@ -10,6 +10,15 @@
 #   - Goals Against
 
 # You will ask how many teams are playing.
+TeamCheck = int(1)
+while TeamCheck == 1:
+    Teams = input("How many teams are playing?")
+    if int(Teams) > int(0):
+        TeamCheck -=1
+    else:
+        print("Now a valid number, please try again.")
+print("end")
+
 # Loop that many times, create a team and set all scores to 0, then append it to your list of teams
 # Start an infinite loop for main menu
 #   1) Add score
