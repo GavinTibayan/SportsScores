@@ -23,8 +23,7 @@ print("What are the team names?")
 while int(Teams) > 0:
     TLst.append(input())
     Teams = int(Teams) - int(1)
-print("end")
-
+print(TLst)
 # Start an infinite loop for main menu
 #   1) Add score
 #   2) See Team stats
