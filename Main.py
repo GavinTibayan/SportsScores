@@ -16,22 +16,30 @@ while TCheck == 1:
     if int(Teams) > int(1):
         TCheck -=1
         TLst = []
+        TLst2 = [0]
+        TLst3 = []
     else:
         print("Now a valid number of teams, please try again.")
 # Loop that many times, create a team and set all scores to 0, then append it to your list of teams
 print("What are the team names?")
 while int(Teams) > 0:
-    TLst.append(input())
+    TLst.append([input(),0,0,0,0,0,0])
+    print("Team:",TLst[-1])
     Teams = int(Teams) - int(1)
 print(TLst)
+on = int(1)
 # Start an infinite loop for main menu
 #   1) Add score
 #   2) See Team stats
 #   3) See Overall Standings
 #   4) Quit
-
+while on == 1:
+    print("What would you like to do?:\n1) Add score\n2) See Team stats\n3) See Overall Standing\n4) Quit")
+    num = input()
 #   1) Enter team 1, team 2, goals for team 1, goals for team 2
 #       - Find the teams, update the games played, add the goals for and against, and decide if it's a win, lose or tie
+    if num == "1":
+        
 
 #   2) Print a list of team names.
 #       Once the user selects, Print out their stats
