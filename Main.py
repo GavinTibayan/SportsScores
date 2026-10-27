@@ -41,7 +41,15 @@ while on == 1:
     num = input()
 #   1) Enter team 1, team 2, goals for team 1, goals for team 2
 #       - Find the teams, update the games played, add the goals for and against, and decide if it's a win, lose or tie
-
+    if num == "1":
+        TSCheck = 1
+        while TSCheck == 1:      
+            print("What's your first team?")
+            TS1 = int(input())
+            if TS1 in Length:
+                print("What's your second team?")
+                TS2 = int(input())
+                if TS2 in Length:
 
 #   2) Print a list of team names.
 #       Once the user selects, Print out their stats
@@ -55,9 +63,6 @@ while on == 1:
                 for o in range(int(TV)+1):
                     print(o)
                 print(TLst[o-1])
-
-
-
 #   3) Print out the teams in order from most team points to least
 #   - Team points = wins*2 + ties*1
 #   - If they have the same points, look for most goals for
