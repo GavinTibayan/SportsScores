@@ -43,7 +43,7 @@ while on == 1:
 #       - Find the teams, update the games played, add the goals for and against, and decide if it's a win, lose or tie
     if num == "1":
         TSCheck = 1
-        while TSCheck == 1:      
+        while TSCheck == 1:
             print("What's your first team?")
             TS1 = int(input())
             if TS1 in Length:
@@ -58,11 +58,11 @@ while on == 1:
                         #print("How many points did",TLst[TS2-1[0]],"Score?")
                         GFor2 = int(input())
                         if GFor1 > GFor2:
-                            pass
+                            print("Team",TLst[TS1],"wins against",TLst[TS2],"by",GFor1,"-",GFor2)
                         elif GFor1 == GFor2:
-                            pass
+                            print("Both team",TLst[TS1],"and",TLst[TS2],"tie by",GFor1,"-",GFor2)
                         else:
-                            pass
+                            print("Team",TLst[TS2],"wins against",TLst[TS1],"by",GFor2,"-",GFor1)
                     else:
                         print("Team already chosen, pick a different team")
 
