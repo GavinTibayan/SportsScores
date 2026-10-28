@@ -47,32 +47,55 @@ while on == 1:
             print("What's your first team?")
             TS1 = int(input())
             if TS1 in Length:
-                print("What's your second team?")
-                TS2 = int(input())
-                if TS2 in Length:
+                TSCheck = 2
+                while TSCheck == 2:
+                    print("What's your second team?")
+                    TS2 = int(input())
+                    if TS2 in Length and TS2 != TS1:
+                        TSCheck = 3
+                        #print("How many points did",TLst[TS1-1[0]],"Score?")
+                        GFor1 = int(input())
+                        #print("How many points did",TLst[TS2-1[0]],"Score?")
+                        GFor2 = int(input())
+                        if GFor1 > GFor2:
+                            pass
+                        elif GFor1 == GFor2:
+                            pass
+                        else:
+                            pass
+                    else:
+                        print("Team already chosen, pick a different team")
 
 #   2) Print a list of team names.
 #       Once the user selects, Print out their stats
-    if num == "2":
+    elif num == "2":
         TVCheck = 1
         while TVCheck == 1:
             print("What team would you like to view?")
+            print("Team List:")
+            for tl in range(len(TLst)):
+                print(Length[tl],"-",TLst[tl])
             TV = int(input())
             if TV in Length:
                 TVCheck -=1
                 for o in range(int(TV)+1):
-                    print(o)
+                    pass
                 print(TLst[o-1])
+            else:
+                print("Not a valid team, please try again")
 #   3) Print out the teams in order from most team points to least
 #   - Team points = wins*2 + ties*1
 #   - If they have the same points, look for most goals for
 #   - If they have the same goals for, take the least goals against.
 #   - If those are the same, then just output the teams.
-
+    elif num == "3":
+        pass
 #   4) Say goodbye and break out of the loop
-    if num == "4":
+    elif num == "4":
         on -=1
         print("\n\t\tGoodbye!")
+    else:
+        print("\n\tInvalid number, please try again\n")
 
 
 
