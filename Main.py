@@ -108,7 +108,7 @@ while on == 1:
                     pass
                 print(TLst[o-1[0]])
                 print(TLst[o-1[1]])
-                print(TLst[o-1[2],o-1[3],o-1[4]])
+                print(TLst[o-1[2]],TLst[o-1[3]],TLst[o-1[4]])
                 print(TLst[o-1[5]])
                 print(TLst[o-1[6]])
 
