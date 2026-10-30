@@ -97,11 +97,13 @@ while on == 1:
         while TVCheck == 1:
             print("What team would you like to view?")
             print("Team List:")
+            tl2 = 0
             for tl2 in range(len(TLst)):
                 print(Length[tl2],"-",TLst[tl2])
             TV = int(input())
             if TV in Length:
                 TVCheck -=1
+                o = 0
                 for o in range(int(TV)+1):
                     pass
                 print(TLst[o-1])
@@ -113,7 +115,9 @@ while on == 1:
 #   - If they have the same goals for, take the least goals against.
 #   - If those are the same, then just output the teams.
     elif num == "3":
-        pass
+        p = 0
+        for p in range(len(Length)):
+            pass
 #   4) Say goodbye and break out of the loop
     elif num == "4":
         on -=1
