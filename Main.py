@@ -59,22 +59,28 @@ while on == 1:
                         GFor2 = int(input())
                         if GFor1 > GFor2:
                             print("Team",TLst[TS1],"wins against",TLst[TS2],"by",GFor1,"-",GFor2)
-                            TLst[TS1[5]] = GFor1
-                            TLst[TS1[6]] = GFor2
-                            TLst[TS2[5]] = GFor2
-                            TLst[TS2[6]] = GFor1
+                            TLst[TS1[2]] +=1
+                            TLst[TS2[3]] +=1
+                            TLst[TS1[5]] += GFor1
+                            TLst[TS1[6]] += GFor2
+                            TLst[TS2[5]] += GFor2
+                            TLst[TS2[6]] += GFor1
                         elif GFor1 == GFor2:
                             print("Both team",TLst[TS1],"and",TLst[TS2],"tie by",GFor1,"-",GFor2)
-                            TLst[TS1[5]] = GFor1
-                            TLst[TS1[6]] = GFor2
-                            TLst[TS2[5]] = GFor2
-                            TLst[TS2[6]] = GFor1
+                            TLst[TS1[4]] += 1
+                            TLst[TS2[4]] += 1
+                            TLst[TS1[5]] += GFor1
+                            TLst[TS1[6]] += GFor2
+                            TLst[TS2[5]] += GFor2
+                            TLst[TS2[6]] += GFor1
                         else:
                             print("Team",TLst[TS2],"wins against",TLst[TS1],"by",GFor2,"-",GFor1)
-                            TLst[TS1[5]] = GFor1
-                            TLst[TS1[6]] = GFor2
-                            TLst[TS2[5]] = GFor2
-                            TLst[TS2[6]] = GFor1
+                            TLst[TS1[3]] += 1
+                            TLst[TS2[2]] += 1
+                            TLst[TS1[5]] += GFor1
+                            TLst[TS1[6]] += GFor2
+                            TLst[TS2[5]] += GFor2
+                            TLst[TS2[6]] += GFor1
                     else:
                         print("Team already chosen, pick a different team")
 
@@ -85,8 +91,8 @@ while on == 1:
         while TVCheck == 1:
             print("What team would you like to view?")
             print("Team List:")
-            for tl in range(len(TLst)):
-                print(Length[tl],"-",TLst[tl])
+            for tl2 in range(len(TLst)):
+                print(Length[tl2],"-",TLst[tl2])
             TV = int(input())
             if TV in Length:
                 TVCheck -=1
