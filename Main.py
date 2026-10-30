@@ -106,7 +106,12 @@ while on == 1:
                 o = 0
                 for o in range(int(TV)+1):
                     pass
-                print(TLst[o-1])
+                print(TLst[o-1[0]])
+                print(TLst[o-1[1]])
+                print(TLst[o-1[2],o-1[3],o-1[4]])
+                print(TLst[o-1[5]])
+                print(TLst[o-1[6]])
+
             else:
                 print("Not a valid team, please try again")
 #   3) Print out the teams in order from most team points to least
@@ -115,9 +120,9 @@ while on == 1:
 #   - If they have the same goals for, take the least goals against.
 #   - If those are the same, then just output the teams.
     elif num == "3":
-        p = 1
+        p = 0
         for p in range(len(Length)):
-            print(p)
+            print(Length[p])
 #   4) Say goodbye and break out of the loop
     elif num == "4":
         on -=1
