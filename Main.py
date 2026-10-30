@@ -59,6 +59,8 @@ while on == 1:
                         GFor2 = int(input())
                         if GFor1 > GFor2:
                             print("Team",TLst[TS1],"wins against",TLst[TS2],"by",GFor1,"-",GFor2)
+                            TLst[TS1[1]] += 1
+                            TLst[TS2[1]] += 1
                             TLst[TS1[2]] +=1
                             TLst[TS2[3]] +=1
                             TLst[TS1[5]] += GFor1
@@ -67,6 +69,8 @@ while on == 1:
                             TLst[TS2[6]] += GFor1
                         elif GFor1 == GFor2:
                             print("Both team",TLst[TS1],"and",TLst[TS2],"tie by",GFor1,"-",GFor2)
+                            TLst[TS1[1]] += 1
+                            TLst[TS2[1]] += 1
                             TLst[TS1[4]] += 1
                             TLst[TS2[4]] += 1
                             TLst[TS1[5]] += GFor1
@@ -75,6 +79,8 @@ while on == 1:
                             TLst[TS2[6]] += GFor1
                         else:
                             print("Team",TLst[TS2],"wins against",TLst[TS1],"by",GFor2,"-",GFor1)
+                            TLst[TS1[1]] += 1
+                            TLst[TS2[1]] += 1
                             TLst[TS1[3]] += 1
                             TLst[TS2[2]] += 1
                             TLst[TS1[5]] += GFor1
