@@ -58,7 +58,7 @@ while on == 1:
                         #print("How many points did",TLst[TS2-1[0]],"Score?")
                         GFor2 = int(input())
                         if GFor1 > GFor2:
-                            print("Team",TLst[TS1],"wins against",TLst[TS2],"by",GFor1,"-",GFor2)
+                            print("Team",TLst[TS1-1],"wins against",TLst[TS2-1],"by",GFor1,"-",GFor2)
                             TLst[TS1[1]] += 1
                             TLst[TS2[1]] += 1
                             TLst[TS1[2]] +=1
@@ -68,7 +68,7 @@ while on == 1:
                             TLst[TS2[5]] += GFor2
                             TLst[TS2[6]] += GFor1
                         elif GFor1 == GFor2:
-                            print("Both team",TLst[TS1],"and",TLst[TS2],"tie by",GFor1,"-",GFor2)
+                            print("Both team",TLst[TS1-1],"and",TLst[TS2-1],"tie by",GFor1,"-",GFor2)
                             TLst[TS1[1]] += 1
                             TLst[TS2[1]] += 1
                             TLst[TS1[4]] += 1
@@ -78,7 +78,7 @@ while on == 1:
                             TLst[TS2[5]] += GFor2
                             TLst[TS2[6]] += GFor1
                         else:
-                            print("Team",TLst[TS2],"wins against",TLst[TS1],"by",GFor2,"-",GFor1)
+                            print("Team",TLst[TS2-1],"wins against",TLst[TS1-1],"by",GFor2,"-",GFor1)
                             TLst[TS1[1]] += 1
                             TLst[TS2[1]] += 1
                             TLst[TS1[3]] += 1
@@ -115,9 +115,9 @@ while on == 1:
 #   - If they have the same goals for, take the least goals against.
 #   - If those are the same, then just output the teams.
     elif num == "3":
-        p = 0
+        p = 1
         for p in range(len(Length)):
-            pass
+            print(p)
 #   4) Say goodbye and break out of the loop
     elif num == "4":
         on -=1
